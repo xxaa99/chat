@@ -23,7 +23,7 @@ body {
 }
 
 .flip-card-inner.flipped {
-	;
+	transform: rotateX(0deg);
 }
 
 .flip-card-front,
