@@ -572,3 +572,37 @@ body {
   position: relative;
   z-index: 1;
 }
+
+/* 隐藏翻转按钮并禁用翻转，保持登录表单正常显示 */
+.help-btn,
+.back-btn {
+    display: none !important;
+}
+
+/* 禁用 3D 翻转动画和透视，让正面直接平铺 */
+.flip-card {
+    perspective: none !important;
+    height: auto !important;
+    min-height: 500px;  /* 保证最小高度不塌陷 */
+}
+
+.flip-card-inner {
+    transform: none !important;
+    transition: none !important;
+    transform-style: flat !important;
+}
+
+.flip-card-inner.flipped {
+    transform: none !important;
+}
+
+/* 隐藏背面（使用说明），只保留正面（登录表单） */
+.flip-card-back {
+    display: none !important;
+}
+
+/* 正面撑满容器 */
+.flip-card-front {
+    position: static !important;
+    transform: none !important;
+}
